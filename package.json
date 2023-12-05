@@ -19,12 +19,14 @@
     "styled-components": "^6.1.1",
     "web-vitals": "^2.1.4"
   },
+  "homepage": "https://echeve.github.io/populationchart",
   "scripts": {
     "start": "react-scripts start",
     "start:development": "cross-env NODE_ENV=development react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +47,7 @@
     ]
   },
   "devDependencies": {
-    "cross-env": "^7.0.3"
+    "cross-env": "^7.0.3",
+    "gh-pages": "^6.1.0"
   }
 }

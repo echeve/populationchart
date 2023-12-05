@@ -9,7 +9,6 @@ class DataFilter {
             }
             return result;
             }, {});
-            console.log('groupedContinents');
 
         const filteredContinents = Object.keys(groupedContinents).reduce((acc, region) => {
             if (groupedContinents[region] >= population) {
