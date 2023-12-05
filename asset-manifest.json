@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/populationchart/static/css/main.9d2c4429.css",
+    "main.js": "/populationchart/static/js/main.7eb395e8.js",
+    "static/js/787.2d3d661d.chunk.js": "/populationchart/static/js/787.2d3d661d.chunk.js",
+    "index.html": "/populationchart/index.html",
+    "main.9d2c4429.css.map": "/populationchart/static/css/main.9d2c4429.css.map",
+    "main.7eb395e8.js.map": "/populationchart/static/js/main.7eb395e8.js.map",
+    "787.2d3d661d.chunk.js.map": "/populationchart/static/js/787.2d3d661d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d2c4429.css",
+    "static/js/main.7eb395e8.js"
+  ]
+}
