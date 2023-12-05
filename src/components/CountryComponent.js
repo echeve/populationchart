@@ -29,8 +29,6 @@ const InputWrapper = styled(NumericFormat)`
 `;
 
 function CountryComponent({globalData, continent, population}){
-    console.log('prueba');
-
     const [filteredData, setFilteredData] = useState([]);
     const [populationFilter, setPopulationFilter] = useState(population);
     
