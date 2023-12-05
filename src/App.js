@@ -1,24 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import ApiService from './services/ApiService'; 
+import React, { useEffect, useState } from 'react';
+import Navbar from './components/Navbar';
+import CountryComponent from './components/CountryComponent';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
+    // Lógica adicional si es necesaria al iniciar la aplicación
+    const [globalData, setGlobalData] = useState([]);
+    const continents = [...new Set(globalData.map(item => item.region))];
+
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const data = await ApiService.fetchData();
+          setGlobalData(data);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+  
+      fetchData();
+    }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <Navbar continents={continents} />
+
+        <Routes>
+          <Route exact path="/" element={<CountryComponent globalData={globalData} continent={''} population={''}/>} />
+          {globalData && continents.map((continent) => (
+            <Route key={continent} path={`/${continent}`} element={<CountryComponent globalData={globalData} continent={continent} population={''} />}/>
+          ))}
+        </Routes>
+      </div>
+    </Router>
+
   );
 }
 

@@ -1,5 +1,5 @@
 import axiosInstance from './AxiosInstance';
-import {RegionModel} from '../models/Index';
+import {RegionModel} from '../models/Index'
 
 const ApiService = {
   async fetchData() {
