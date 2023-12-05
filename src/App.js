@@ -23,7 +23,7 @@ function App() {
     }, []);
 
   return (
-    <Router>
+    <Router basename='/populationchart'>
       <div>
         <Navbar continents={continents} />
 
