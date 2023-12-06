@@ -2,7 +2,7 @@ import ApiService from './services/ApiService';
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar';
 import CountryComponent from './components/CountryComponent';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
     // Lógica adicional si es necesaria al iniciar la aplicación
@@ -23,7 +23,7 @@ function App() {
     }, []);
 
   return (
-    <Router basename='/populationchart'>
+    <Router>
       <div>
         <Navbar continents={continents} />
 
